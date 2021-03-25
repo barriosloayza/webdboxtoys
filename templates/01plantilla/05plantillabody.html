@@ -1,0 +1,73 @@
+{% extends '01plantilla/01plantillaprincipal.html' %} 
+{% load static %}
+
+{% block body %}
+
+<body class="hold-transition sidebar-mini sidebar-collapse">
+    <!-- Site wrapper -->
+    <div class="wrapper">
+        
+        <!-- Barra de menu horizontal -->
+            {% include '01plantilla/02plantillamenuhorizontal.html' %}
+             
+        <!-- Barra de navegacion lateral -->
+            {% include '01plantilla/03plantillamenulateral.html' %}
+        
+
+
+        <!-- Contenido de la pagina -->
+        <div class="content-wrapper">
+            <section class="content-header" data-pg-collapsed>
+                <div class="container-fluid" data-pg-collapsed>
+                    <div class="row mb-2">
+                        <div class="col-sm-6">
+                            <h1>Collapsed Sidebar</h1>
+                        </div>
+                        <div class="col-sm-6">
+                            <ol class="breadcrumb float-sm-right">
+                                <li class="breadcrumb-item">
+                                    <a href="#">Home</a>
+                                </li>
+                                <li class="breadcrumb-item">
+                                    <a href="#">Layout</a>
+                                </li>
+                                <li class="breadcrumb-item active">Collapsed Sidebar</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.container-fluid -->
+            </section>
+            <section class="content">
+
+                {% block contendio %}
+                
+                {% endblock %}
+
+            </section>
+            
+        </div>
+
+        <!-- Pie de pagina -->
+        {% include '01plantilla/04plantillapiedepagina.html' %}
+        
+
+        <!-- Control Sidebar -->
+        <aside class="control-sidebar control-sidebar-dark">
+            <!-- Control sidebar content goes here -->
+        </aside>
+
+        <!-- /.control-sidebar -->
+    </div>
+    <!-- ./wrapper -->
+    <!-- jQuery -->
+    <script src="{% static 'adminhome/plugins/jquery/jquery.min.js'%}"></script>
+    <!-- Bootstrap 4 -->
+    <script src="{% static 'adminhome/plugins/bootstrap/js/bootstrap.bundle.min.js'%}"></script>
+    <!-- AdminLTE App -->
+    <script src="{% static 'adminhome/js/adminlte.min.js'%}"></script>
+    <!-- AdminLTE for demo purposes -->
+    <script src="{% static 'adminhome/js/demo.js'%}"></script>
+</body>
+
+{% endblock %} 

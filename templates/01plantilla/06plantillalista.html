@@ -1,0 +1,40 @@
+{% extends '01plantilla/05plantillabody.html' %}
+
+{% block titulo %}
+        <title>Lista de Categorias</title>
+{% endblock %}
+
+{% block contendio %}
+        <div class="card card-default" data-pg-collapsed>
+                <div class="card-header">
+                        <h3 class="card-title"> <i class="fas fa-search"></i>
+                                {{titulo}} 
+                        </h3>
+                </div>
+
+                <!-- /.card-header -->
+                <div class="card-body">
+                        <table class="table">
+                                <thead>
+                                        {% block columnas %}
+
+                                        {% endblock %}
+
+                                </thead>
+
+                                <tbody>
+                                        {% block filas %}
+
+                                        {% endblock %} 
+                                </tbody>
+                        </table>
+                </div>
+
+                <div class="card-footer">
+                        <button type="button" class="btn btn-primary"><i class="fas fa-plus"></i>
+                                Nuevo Registro
+                        </button>
+
+                </div>
+        </div>
+{% endblock %}
